@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Center, Image, Text } from "@chakra-ui/react";
+import logo from "./assets/logo.svg";
+import AddIdea from "./modules/AddIdea";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box py={5}>
+      <Center>
+        <Image src={logo} />
+      </Center>
+
+      <Box mt={100} textAlign="center">
+        <Text fontSize={48} color="#333" fontFamily="Montserrat">
+          Add your idea to voite
+        </Text>
+        <Text fontSize={20} color="#999" my={25}>
+          Add your idea so that others can evaluate how well it will enter the
+          market and be in <br /> demand among users
+        </Text>
+        <AddIdea />
+      </Box>
+    </Box>
   );
-}
+};
 
 export default App;
